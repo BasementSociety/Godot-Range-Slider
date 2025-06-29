@@ -1,0 +1,193 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4txkised5hxl"]
+
+[ext_resource type="Script" uid="uid://v3afvkamyvbx" path="res://addons/RangeSlider/Example/example.gd" id="1_n51mc"]
+[ext_resource type="Script" uid="uid://ldhb5m6sb441" path="res://addons/RangeSlider/h_range_slider.gd" id="2_8lvy3"]
+[ext_resource type="Script" uid="uid://kl8lbx6mm70h" path="res://addons/RangeSlider/v_range_slider.gd" id="2_n51mc"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n51mc")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "RangeSlider Node Example Scene"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Horizontal Range Slider from 0 to 100
+(Minimum range size = 10)"
+horizontal_alignment = 1
+
+[node name="HRangeSlider_0_100" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("2_8lvy3")
+metadata/_custom_type_script = "uid://ldhb5m6sb441"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label_Begin_0_100" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Range Begin: x"
+
+[node name="Label_End_0_100" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Range End: x"
+horizontal_alignment = 2
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Horizontal Range Slider from -10 to 10
+(Minimum range size = 2)"
+horizontal_alignment = 1
+
+[node name="HRangeSlider_10_10" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("2_8lvy3")
+minimum = -10.0
+maximum = 10.0
+range_begin = -5.0
+range_end = 5.0
+range_min_size = 2.0
+metadata/_custom_type_script = "uid://ldhb5m6sb441"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label_Begin_10_10" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Range Begin: x"
+
+[node name="Label_End_10_10" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Range End: x"
+horizontal_alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Vertical Range Slider from 0 to 100
+(Minimum range size = 10)"
+horizontal_alignment = 1
+
+[node name="VRangeSlider_0_100" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("2_n51mc")
+metadata/_custom_type_script = "uid://kl8lbx6mm70h"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label_Begin_0_100" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Range Begin: x"
+
+[node name="Label_End_0_100" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Range End: x"
+horizontal_alignment = 2
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+text = "Vertical Range Slider from -10 to 10
+(Minimum range size = 2)"
+horizontal_alignment = 1
+
+[node name="VRangeSlider_10_10" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("2_n51mc")
+minimum = -10.0
+maximum = 10.0
+range_begin = -5.0
+range_end = 5.0
+range_min_size = 2.0
+metadata/_custom_type_script = "uid://kl8lbx6mm70h"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label_Begin_10_10" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Range Begin: x"
+
+[node name="Label_End_10_10" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Range End: x"
+horizontal_alignment = 2
+
+[connection signal="changed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HRangeSlider_0_100" to="." method="_on_h_range_slider_0_100_changed"]
+[connection signal="changed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HRangeSlider_10_10" to="." method="_on_h_range_slider_10_10_changed"]
+[connection signal="changed" from="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/VRangeSlider_0_100" to="." method="_on_V_range_slider_0_100_changed"]
+[connection signal="changed" from="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/VRangeSlider_10_10" to="." method="_on_v_range_slider_10_10_changed"]
