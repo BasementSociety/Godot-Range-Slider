@@ -1,5 +1,5 @@
 @tool
-@icon("res://IconV.svg")
+@icon("res://addons/RangeSlider/IconV.svg")
 class_name VRangeSlider
 extends RangeSlider
 

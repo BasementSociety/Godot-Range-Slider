@@ -1,7 +1,10 @@
 # Godot Range Slider
 An addon that provides two types of range sliders: A horizontal and a vertical one. With this node you are able to define a range inside of given minimum and maximum values. It lets you basically set the begin and end of a range with the mouse as well as moving the whole range up or down.
+![Demo](/docs/demo.gif "Demo")
 
 ## Parameters
+![Parameters](/docs/parameters.png "Parameters")
+
 ### Minimum
 The minimum value defines the lowest value the range begin can have. It can be negative or positive.
 
@@ -26,5 +29,3 @@ The diameter of the Range Begin and Range End handles.
 
 ### Colors
 The background color, handle color and active handle color, which defines the color the handle and range have, if the mouse is over them or they are currently being dragged, can be defined here.
-
-
