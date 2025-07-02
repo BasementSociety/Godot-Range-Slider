@@ -1,3 +1,5 @@
+![Icon](/docs/icon.png "RangeSlider")
+
 # Godot Range Slider
 An addon that provides two types of range sliders: A horizontal and a vertical one. With this node you are able to define a range inside of given minimum and maximum values. It lets you basically set the begin and end of a range with the mouse as well as moving the whole range up or down.
 ![Demo](/docs/demo.gif "Demo")
